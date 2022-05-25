@@ -19,6 +19,7 @@ flagImage.src = 'https://inotgo.com/imagesLocal/202108/03/20210803020506364t_4.p
 const defaultImage = new Image()
 defaultImage.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Minesweeper_unopened_square.svg/768px-Minesweeper_unopened_square.svg.png'
 
+
 const menuSize = 100;
 
 let time = 0
@@ -395,3 +396,5 @@ const drawWinScreen = () => {
   ctx.fillStyle = 'white';
   ctx.fillText("YOU WIN! REFRESH TO PLAY AGAIN", width / 2, height / 2, width)
 }
+
+defaultImage.onload(startGame())
