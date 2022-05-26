@@ -62,7 +62,7 @@ const init = (diff) => {
       bombCount = 40
   }
 
-  width = window.innerWidth - 10
+  width = window.innerWidth - menuSize
   height = width;
 
   w = width / xCount
@@ -381,9 +381,9 @@ const drawBorder = () => {
 }
 
 const drawTimerOnScreen = () => {
-  ctx.fillStyle = 'white'
+  ctx.fillStyle = '#b9b9b9'
   ctx.fillRect(0, 0, width, menuSize);
-  ctx.font = `${w / 2}px serif`
+  ctx.font = `${w}px serif`
   ctx.fillStyle = 'red'
   ctx.fillText(time, width / 2, menuSize / 2, width, menuSize)
 }
@@ -397,4 +397,4 @@ const drawWinScreen = () => {
   ctx.fillText("YOU WIN! REFRESH TO PLAY AGAIN", width / 2, height / 2, width)
 }
 
-defaultImage.onload(startGame())
+defaultImage.onload = () => {startGame()}
