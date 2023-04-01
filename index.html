@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minesweeper</title>
-</head>
-<body>
-  <canvas id="canvas" />
-</body>
-<script src="game.js"></script>
-<style>
-  canvas {
-    display: block;
-    margin: auto;
-    cursor: pointer;
-  }
-</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body"></body>
+  <div id="loading-screen">Loading...</div>
+
+  <div id="game">
+    <div id="top-menu">
+      <div id="mines">000</div>
+      <button id="smiley" onclick="restart()"></button>
+      <div id="timer">000</div>
+    </div>
+    <div id="game-wrapper"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="board.js"></script>
 </html>

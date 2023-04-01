@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Geostar Fill", cursive;
+}
+
+body {
+  margin: 0;
+}
+
+#game-wrapper {
+  display: grid;
+  margin: auto;
+
+  place-items: center;
+  justify-content: center;
+  align-content: center;
+  place-content: center;
+
+  display: none;
+}
+
+#game {
+  display: block;
+  outline: 30px solid rgb(189, 189, 189);
+  margin: auto;
+}
+
+#top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+
+  background-color: rgb(189, 189, 189);
+  margin: auto;
+
+  color: red;
+}
+
+#timer {
+  background-color: black;
+  text-align: center;
+}
+
+#mines {
+  background-color: black;
+  text-align: center;
+}
+
+#smiley {
+  background-image: url("./assets/smile.png");
+  background-size: cover;
+
+  background-color: rgb(189, 189, 189);
+  border-top: 4px solid rgb(241, 241, 241);
+  border-left: 4px solid rgb(241, 241, 241);
+  border-bottom: 4px solid rgb(123, 123, 123);
+  border-right: 4px solid rgb(123, 123, 123);
+}
+
+#smiley:active {
+  border-top-color: rgb(123, 123, 123);
+  border-left-color: rgb(123, 123, 123);
+  border-bottom-color: rgb(241, 241, 241);
+  border-right-color: rgb(241, 241, 241);
+
+  border-left-width: 5px;
+  border-top-width: 5px;
+
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(189, 189, 189);
+
+  border-top: 8px solid rgb(241, 241, 241);
+  border-left: 8px solid rgb(241, 241, 241);
+  border-bottom: 8px solid rgb(123, 123, 123);
+  border-right: 8px solid rgb(123, 123, 123);
+}
+
+.mousedown {
+  border: none !important;
+}
+
+.number {
+  border: none;
+  outline: 1px solid black;
+}
+
+.value-1 {
+  color: rgb(0, 0, 255);
+}
+
+.value-2 {
+  color: rgb(20, 130, 20);
+}
+
+.value-3 {
+  color: rgb(255, 0, 0);
+}
+
+.value-4 {
+  color: rgb(0, 0, 128);
+}
+
+.value-5 {
+  color: rgb(128, 0, 0);
+}
+
+.value-6 {
+  color: rgb(0, 128, 128);
+}
+
+.value-7 {
+  color: rgb(0, 0, 0);
+}
+
+.value-8 {
+  color: rgb(128, 128, 128);
+}
+
+.bomb {
+  background-color: rgb(255, 0, 0);
+
+  background-image: url("./assets/bomb.png");
+  background-size: cover;
+}
+
+.flag {
+  background-image: url("./assets/flag.png");
+  background-size: cover;
+}
+
+.wrong-flag {
+  background-image: url("./assets/bomb.png");
+  background-size: cover;
+}
+
+.wrong-flag::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+
+  background-color: red;
+
+  /* Transform origin middle */
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg);
+}
+
+.wrong-flag::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+
+  background-color: red;
+}
